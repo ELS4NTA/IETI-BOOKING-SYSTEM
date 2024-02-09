@@ -44,10 +44,21 @@ Verificación del primer endpoint de la aplicación [http://localhost:8080/healt
 
 Operaciones CRUD para usuarios y verificación de los endpoints de la aplicación con [Postman](https://www.postman.com/).
 
-<h3 style="color:#ffe47e;">POST</h3>
-<h3 style="color:#4da2f6;" >PUT</h3>
-<h3 style="color:#6bdd9a;">GET</h3>
-<h3 style="color:#f79a8e;">DELETE</h3>
+$\color{Yellow}\large{\textbf{POST}}$
+
+![image](https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM/assets/99996670/f672a5b1-3f12-41da-a94c-9c09771b23bd)
+
+$\color{Green}\large{\textbf{GET}}$
+
+![image](https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM/assets/99996670/27c608ec-70e0-41d2-9799-6f0d565fc0df)
+
+$\color{RoyalBlue}\large{\textbf{PUT}}$
+
+![image](https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM/assets/99996670/6c0e2aad-32c3-402c-84ec-a4123baf322d)
+
+$\color{OrangeRed}\large{\textbf{DELETE}}$
+
+![image](https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM/assets/99996670/454f9dfc-4597-4c16-b872-2ecb3a52a55e)
 
 ## Versionado 📌
 
