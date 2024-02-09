@@ -1,6 +1,7 @@
 package edu.eci.ieti.bookingsystem.repository.user;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 public class User {
 
@@ -19,7 +20,7 @@ public class User {
     }
 
     public User(UserDto userDto) {
-        this.id = null;
+        this.id = UUID.randomUUID().toString();
         this.name = userDto.getName();
         this.lastName = userDto.getLastName();
         this.email = userDto.getEmail();

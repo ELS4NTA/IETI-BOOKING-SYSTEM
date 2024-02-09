@@ -1,5 +1,6 @@
 package edu.eci.ieti.bookingsystem.service.user;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +15,7 @@ import edu.eci.ieti.bookingsystem.repository.user.User;
 public class UsersServiceMap implements UsersService {
 
     Map<String, User> users = new HashMap<>();
-
+    
     @Override
     public User save(User user) {
         users.put(user.getId(), user);
@@ -31,7 +32,8 @@ public class UsersServiceMap implements UsersService {
 
     @Override
     public List<User> all() {
-        List<User> userList = (List<User>) users.values();
+        List<User> userList = new ArrayList<>();
+        userList.addAll(users.values());
         return userList;
     }
 

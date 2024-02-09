@@ -40,9 +40,14 @@ Verificación del primer endpoint de la aplicación [http://localhost:8080/healt
 
 ![image](https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM/assets/99996670/6d5c7217-97e3-4bd9-be61-f3724bed42fa)
 
-
 ## Segunda parte: Controlador y servicio de usuarios 2️⃣
 
+Operaciones CRUD para usuarios y verificación de los endpoints de la aplicación con [Postman](https://www.postman.com/).
+
+<h3 style="color:#ffe47e;">POST</h3>
+<h3 style="color:#4da2f6;" >PUT</h3>
+<h3 style="color:#6bdd9a;">GET</h3>
+<h3 style="color:#f79a8e;">DELETE</h3>
 
 ## Versionado 📌
 
