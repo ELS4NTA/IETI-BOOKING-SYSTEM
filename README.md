@@ -38,6 +38,8 @@ mvn clean spring-boot:run
 
 Verificación del primer endpoint de la aplicación [http://localhost:8080/health](http://localhost:8080/health).
 
+![image](https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM/assets/99996670/6d5c7217-97e3-4bd9-be61-f3724bed42fa)
+
 
 ## Segunda parte: Controlador y servicio de usuarios 2️⃣
 
