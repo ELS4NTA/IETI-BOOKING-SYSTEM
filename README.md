@@ -60,6 +60,23 @@ $\color{OrangeRed}\large{\textbf{DELETE}}$
 
 ![image](https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM/assets/99996670/454f9dfc-4597-4c16-b872-2ecb3a52a55e)
 
+## Tercera parte: Persistencia con Spring Data MongoDB. 3️⃣
+
+Crear un cluster en Atlas MongoDB y configurar la conexión con la aplicación.
+
+
+Configuración de la conexión con la base de datos.
+
+```properties
+spring.data.mongodb.uri=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/mydatabase
+spring.data.mongodb.database=mydatabase
+```
+
+Implementar la interfaz y el servicio para realizar las operaciones CRUD sobre el modelo almacenado en la base de datos.
+
+Con el uso de [Postman](https://www.postman.com/), se verifica la persistencia de los datos en la base de datos, realizando las operaciones CRUD como en la segunda parte.
+
+
 ## Versionado 📌
 
   ![IETI BOOKING SYSTEM](https://img.shields.io/badge/IETI_BOOKING_SYSTEM-v1.0.0-blue)

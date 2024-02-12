@@ -1,15 +1,22 @@
 package edu.eci.ieti.bookingsystem.repository.user;
 
 import java.time.LocalDate;
-import java.util.UUID;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "users_collection")
 public class User {
 
-    private final String id;
-    private final LocalDate createdAt;
+    @Id
+    private String id;
+    private LocalDate createdAt;
     private String name;
     private String lastName;
     private String email;
+
+    public User() {
+    }
 
     public User(String id, String name, String lastName, String email, String password) {
         this.id = id;
@@ -20,7 +27,7 @@ public class User {
     }
 
     public User(UserDto userDto) {
-        this.id = UUID.randomUUID().toString();
+        this.id = null;
         this.name = userDto.getName();
         this.lastName = userDto.getLastName();
         this.email = userDto.getEmail();
@@ -57,6 +64,10 @@ public class User {
 
     public LocalDate getCreatedAt() {
         return createdAt;
+    }
+
+    public void setCreatedAt(LocalDate createdAt) {
+        this.createdAt = createdAt;
     }
 
     public void update(UserDto userDto) {
