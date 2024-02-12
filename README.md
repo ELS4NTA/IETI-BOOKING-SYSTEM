@@ -64,6 +64,12 @@ $\color{OrangeRed}\large{\textbf{DELETE}}$
 
 Crear un cluster en Atlas MongoDB y configurar la conexión con la aplicación.
 
+![image](https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM/assets/99996670/dae0e0ec-1aa4-41d5-afd1-b2c91c89f43e)
+
+![image](https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM/assets/99996670/a623ec3b-6d15-46df-95e7-97fb6f2b5739)
+
+![image](https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM/assets/99996670/2f16659a-1e42-4a11-8042-74573e39226e)
+
 
 Configuración de la conexión con la base de datos.
 
@@ -76,6 +82,7 @@ Implementar la interfaz y el servicio para realizar las operaciones CRUD sobre e
 
 Con el uso de [Postman](https://www.postman.com/), se verifica la persistencia de los datos en la base de datos, realizando las operaciones CRUD como en la segunda parte.
 
+![image](https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM/assets/99996670/e7300599-baa8-4baf-827f-10d059c2aa1c)
 
 ## Versionado 📌
 
