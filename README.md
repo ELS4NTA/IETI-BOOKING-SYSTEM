@@ -22,7 +22,6 @@ Realice los siguientes pasos para clonar el proyecto en su máquina local.
 ```bash
 git clone https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM.git
 cd IETI-BOOKING-SYSTEM/
-
 ```
 
 ## Ejecutando la aplicación ⚙️
@@ -31,7 +30,6 @@ Para ejecutar la aplicación, ejecute el siguiente comando:
 
 ```bash
 mvn clean spring-boot:run
-
 ```
 
 ## Primera parte: Configuración inicial 1️⃣
@@ -98,6 +96,10 @@ En esta habilitamos el endpoint `/v1/users` con el metodo `POST` para registrar 
 Luego de esto vamos al endpoint `/v1/auth` con el metodo `POST` para obtener el token de autenticación.
 
 ![image](https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM/assets/99996670/14ba2195-d922-4cfc-a29e-68c6a8803ff5)
+
+## Quinta parte: Pruebas unitarias 5️⃣
+
+Se realizan pruebas unitarias para los servicios de la aplicación y se usa el plugin de Jacoco para generar el reporte de cobertura de código.
 
 ## Versionado 📌
 
