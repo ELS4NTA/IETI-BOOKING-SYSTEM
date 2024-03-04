@@ -16,12 +16,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import edu.eci.ieti.bookingsystem.exception.UserNotFoundException;
-import edu.eci.ieti.bookingsystem.repository.user.User;
+import edu.eci.ieti.bookingsystem.repository.user.UserDocument;
 import edu.eci.ieti.bookingsystem.repository.user.UserDto;
 import edu.eci.ieti.bookingsystem.service.user.UsersService;
 
 @RestController
-@RequestMapping("/v1/users/")
+@RequestMapping("/v1/users")
 public class UsersController {
 
     private final UsersService usersService;
@@ -31,21 +31,21 @@ public class UsersController {
     }
 
     @PostMapping
-    public ResponseEntity<User> createuser(@RequestBody UserDto userDto) {
-        User newUser = usersService.save(new User(userDto));
-        URI createdUserUri = URI.create("/v1/users/" + newUser.getId());
-        return ResponseEntity.created(createdUserUri).body(newUser);
+    public ResponseEntity<UserDocument> createuser(@RequestBody UserDto userDto) {
+        UserDocument newUserDocument = usersService.save(new UserDocument(userDto));
+        URI createdUserUri = URI.create("/v1/users/" + newUserDocument.getId());
+        return ResponseEntity.created(createdUserUri).body(newUserDocument);
     }
 
     @GetMapping
-    public ResponseEntity<List<User>> getAllUsers() {
-        List<User> users = usersService.all();
-        return ResponseEntity.ok(users);
+    public ResponseEntity<List<UserDocument>> getAllUsers() {
+        List<UserDocument> userDocuments = usersService.all();
+        return ResponseEntity.ok(userDocuments);
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<User> findById(@PathVariable("id") String id) {
-        Optional<User> user = usersService.findById(id);
+    public ResponseEntity<UserDocument> findById(@PathVariable("id") String id) {
+        Optional<UserDocument> user = usersService.findById(id);
         if (user.isPresent()) {
             return ResponseEntity.ok(user.get());
         }
@@ -53,12 +53,12 @@ public class UsersController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<User> updateUser(@PathVariable("id") String id, @RequestBody UserDto userDto) {
-        Optional<User> findedUser = usersService.findById(id);
+    public ResponseEntity<UserDocument> updateUser(@PathVariable("id") String id, @RequestBody UserDto userDto) {
+        Optional<UserDocument> findedUser = usersService.findById(id);
         if (findedUser.isPresent()) {
-            User updatedUser = findedUser.get();
-            updatedUser.update(userDto);
-            User newuser = usersService.save(updatedUser);
+            UserDocument updatedUserDocument = findedUser.get();
+            updatedUserDocument.update(userDto);
+            UserDocument newuser = usersService.save(updatedUserDocument);
             return ResponseEntity.ok(newuser);
         }
         throw new UserNotFoundException(id);
@@ -66,7 +66,7 @@ public class UsersController {
 
     @DeleteMapping("{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable("id") String id) {
-        Optional<User> user = usersService.findById(id);
+        Optional<UserDocument> user = usersService.findById(id);
         if (user.isPresent()) {
             usersService.deleteById(id);
             return ResponseEntity.ok().build();

@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import edu.eci.ieti.bookingsystem.exception.UserNotFoundException;
-import edu.eci.ieti.bookingsystem.repository.user.User;
+import edu.eci.ieti.bookingsystem.repository.user.UserDocument;
 import edu.eci.ieti.bookingsystem.repository.user.UserMongoRepository;
 
 @Service
@@ -22,37 +22,42 @@ public class UserServiceMongoDb implements UsersService {
     }
 
     @Override
-    public User save(User user) {
-        return userMongoRepository.save(user);
+    public UserDocument save(UserDocument userDocument) {
+        return userMongoRepository.save(userDocument);
     }
 
     @Override
-    public Optional<User> findById(String id) {
-        Optional<User> user = userMongoRepository.findById(id);
+    public Optional<UserDocument> findById(String id) {
+        Optional<UserDocument> user = userMongoRepository.findById(id);
         if (!user.isPresent())
             throw new UserNotFoundException(id);
         return user;
     }
 
     @Override
-    public List<User> all() {
+    public Optional<UserDocument> findByEmail(String email) {
+        return userMongoRepository.findByEmail(email);
+    }
+
+    @Override
+    public List<UserDocument> all() {
         return userMongoRepository.findAll();
     }
 
     @Override
     public void deleteById(String id) {
-        Optional<User> user = userMongoRepository.findById(id);
+        Optional<UserDocument> user = userMongoRepository.findById(id);
         if (!user.isPresent())
             throw new UserNotFoundException(id);
         userMongoRepository.deleteById(id);
     }
 
     @Override
-    public User update(User user, String userId) {
-        Optional<User> userToUpdate = userMongoRepository.findById(userId);
+    public UserDocument update(UserDocument userDocument, String userId) {
+        Optional<UserDocument> userToUpdate = userMongoRepository.findById(userId);
         if (!userToUpdate.isPresent())
             throw new UserNotFoundException(userId);
-        return userMongoRepository.save(user);
+        return userMongoRepository.save(userDocument);
     }
-    
+
 }

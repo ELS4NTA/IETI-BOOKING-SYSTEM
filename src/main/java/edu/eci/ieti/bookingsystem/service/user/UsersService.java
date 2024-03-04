@@ -3,18 +3,20 @@ package edu.eci.ieti.bookingsystem.service.user;
 import java.util.List;
 import java.util.Optional;
 
-import edu.eci.ieti.bookingsystem.repository.user.User;
+import edu.eci.ieti.bookingsystem.repository.user.UserDocument;
 
 public interface UsersService {
 
-    User save(User user);
+    UserDocument save(UserDocument userDocument);
 
-    Optional<User> findById(String id);
+    Optional<UserDocument> findById(String id);
 
-    List<User> all();
+    Optional<UserDocument> findByEmail(String email);
+
+    List<UserDocument> all();
 
     void deleteById(String id);
 
-    User update(User user, String userId);
-    
+    UserDocument update(UserDocument userDocument, String userId);
+
 }

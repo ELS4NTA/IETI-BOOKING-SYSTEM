@@ -70,7 +70,6 @@ Crear un cluster en Atlas MongoDB y configurar la conexión con la aplicación.
 
 ![image](https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM/assets/99996670/2f16659a-1e42-4a11-8042-74573e39226e)
 
-
 Configuración de la conexión con la base de datos.
 
 ```properties
@@ -84,6 +83,16 @@ Con el uso de [Postman](https://www.postman.com/), se verifica la persistencia d
 
 ![image](https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM/assets/99996670/e7300599-baa8-4baf-827f-10d059c2aa1c)
 
+## Cuarta parte: Seguridad con JWT 4️⃣
+
+Implementar la seguridad con JWT en la aplicación.
+
+Se crea la configuración de seguridad con JWT y un filtro en las clases `SecurityConfig` y `JWTAuthorizationFilter`.
+
+En esta habilitamos el endpoint `/v1/users` con el metodo `POST` para registrar un usuario.
+
+Luego de esto vamos al endpoint `/v1/auth` con el metodo `POST` para obtener el token de autenticación.
+
 ## Versionado 📌
 
   ![IETI BOOKING SYSTEM](https://img.shields.io/badge/IETI_BOOKING_SYSTEM-v1.0.0-blue)
@@ -94,6 +103,6 @@ Con el uso de [Postman](https://www.postman.com/), se verifica la persistencia d
 
 ## Licencia 📄
 
-[![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
 
 Este proyecto está bajo la licencia de Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0) - Ver el archivo [LICENSE](LICENSE) para más detalles.

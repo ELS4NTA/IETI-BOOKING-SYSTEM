@@ -9,32 +9,37 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 import edu.eci.ieti.bookingsystem.exception.UserNotFoundException;
-import edu.eci.ieti.bookingsystem.repository.user.User;
+import edu.eci.ieti.bookingsystem.repository.user.UserDocument;
 
 @Service
 public class UsersServiceMap implements UsersService {
 
-    Map<String, User> users = new HashMap<>();
-    
+    Map<String, UserDocument> users = new HashMap<>();
+
     @Override
-    public User save(User user) {
-        users.put(user.getId(), user);
-        return user;
+    public UserDocument save(UserDocument userDocument) {
+        users.put(userDocument.getId(), userDocument);
+        return userDocument;
     }
 
     @Override
-    public Optional<User> findById(String id) {
+    public Optional<UserDocument> findById(String id) {
         if (!users.containsKey(id))
             throw new UserNotFoundException(id);
-        User user = users.get(id);
-        return Optional.of(user);
+        UserDocument userDocument = users.get(id);
+        return Optional.of(userDocument);
     }
 
     @Override
-    public List<User> all() {
-        List<User> userList = new ArrayList<>();
-        userList.addAll(users.values());
-        return userList;
+    public Optional<UserDocument> findByEmail(String email) {
+        return Optional.empty();
+    }
+
+    @Override
+    public List<UserDocument> all() {
+        List<UserDocument> userDocumentList = new ArrayList<>();
+        userDocumentList.addAll(users.values());
+        return userDocumentList;
     }
 
     @Override
@@ -46,11 +51,11 @@ public class UsersServiceMap implements UsersService {
     }
 
     @Override
-    public User update(User user, String userId) {
+    public UserDocument update(UserDocument userDocument, String userId) {
         if (!users.containsKey(userId))
             throw new UserNotFoundException(userId);
-        users.put(userId, user);
-        return user;
+        users.put(userId, userDocument);
+        return userDocument;
     }
 
 }
