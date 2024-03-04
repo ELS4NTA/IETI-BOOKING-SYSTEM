@@ -101,6 +101,8 @@ Luego de esto vamos al endpoint `/v1/auth` con el metodo `POST` para obtener el 
 
 Se realizan pruebas unitarias para los servicios de la aplicación y se usa el plugin de Jacoco para generar el reporte de cobertura de código.
 
+![image](https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM/assets/99996670/b106fa22-09c5-4e60-89bf-55f8112773e8)
+
 ## Versionado 📌
 
   ![IETI BOOKING SYSTEM](https://img.shields.io/badge/IETI_BOOKING_SYSTEM-v1.0.0-blue)
