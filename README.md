@@ -91,7 +91,13 @@ Se crea la configuración de seguridad con JWT y un filtro en las clases `Securi
 
 En esta habilitamos el endpoint `/v1/users` con el metodo `POST` para registrar un usuario.
 
+![image](https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM/assets/99996670/b04cae8b-00b6-49c3-9c92-8e27ae0fffd1)
+
+![image](https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM/assets/99996670/5b0ff2b3-ae89-44bf-bed6-866ae181b596)
+
 Luego de esto vamos al endpoint `/v1/auth` con el metodo `POST` para obtener el token de autenticación.
+
+![image](https://github.com/ELS4NTA/IETI-BOOKING-SYSTEM/assets/99996670/14ba2195-d922-4cfc-a29e-68c6a8803ff5)
 
 ## Versionado 📌
 
